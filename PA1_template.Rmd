@@ -7,9 +7,8 @@ output:
 
 
 ## Loading and preprocessing the data
-```{r firstpart,echo=TRUE,results='asis'}
-library(plyr)
-#Loading and preprocessing the data
+```{r firstpart,echo=TRUE,results='asis',cache=TRUE}
+
 unzip(zipfile="activity.zip",exdir="./",overwrite=TRUE)
 data<-read.csv('activity.csv',header=TRUE)
 data1<-na.omit(data)
@@ -84,7 +83,7 @@ new_median_steps <-median(new.total.steps$steps)
 The mean and median of the total number of steps per day after imputation is `r new_mean_steps` and `r new_median_steps ` respectively.  
 The  mean and median of total number of steps per day with missing values is `r mean_steps `
 and `r median_steps ` respectively.  
-After imputing missing values , the median of the total number of steps per day increased to `r new_median_steps ` and mean remain same.
+After imputing missing values , the median of the total number of steps per day increased to `r new_median_steps ` and mean remains same.
 
 ```{r fifthpart1,echo=TRUE,results='asis'}
 #Are there differences in activity patterns between weekdays and weekends?

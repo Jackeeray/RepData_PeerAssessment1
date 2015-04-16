@@ -203,9 +203,7 @@ hr {
 <body>
 <h2>Loading and preprocessing the data</h2>
 
-<pre><code class="r">library(plyr)
-#Loading and preprocessing the data
-unzip(zipfile=&quot;activity.zip&quot;,exdir=&quot;./&quot;,overwrite=TRUE)
+<pre><code class="r">unzip(zipfile=&quot;activity.zip&quot;,exdir=&quot;./&quot;,overwrite=TRUE)
 data&lt;-read.csv(&#39;activity.csv&#39;,header=TRUE)
 data1&lt;-na.omit(data)
 </code></pre>
@@ -284,7 +282,7 @@ new_median_steps &lt;-median(new.total.steps$steps)
 <p>The mean and median of the total number of steps per day after imputation is 1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup> respectively.<br/>
 The  mean and median of total number of steps per day with missing values is 1.0766 &times; 10<sup>4</sup>
 and 10765 respectively.<br/>
-After imputing missing values , the median of the total number of steps per day increased to 1.0766189 &times; 10<sup>4</sup> and mean remain same.</p>
+After imputing missing values , the median of the total number of steps per day increased to 1.0766189 &times; 10<sup>4</sup> and mean remains same.</p>
 
 <pre><code class="r">#Are there differences in activity patterns between weekdays and weekends?
 imputed_data$type_of_day&lt;-weekdays(as.Date(imputed_data$date))

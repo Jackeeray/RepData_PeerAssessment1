@@ -9,8 +9,6 @@ output:
 ## Loading and preprocessing the data
 
 ```r
-library(plyr)
-#Loading and preprocessing the data
 unzip(zipfile="activity.zip",exdir="./",overwrite=TRUE)
 data<-read.csv('activity.csv',header=TRUE)
 data1<-na.omit(data)
@@ -98,7 +96,7 @@ new_median_steps <-median(new.total.steps$steps)
 The mean and median of the total number of steps per day after imputation is 1.0766189 &times; 10<sup>4</sup> and 1.0766189 &times; 10<sup>4</sup> respectively.  
 The  mean and median of total number of steps per day with missing values is 1.0766 &times; 10<sup>4</sup>
 and 10765 respectively.  
-After imputing missing values , the median of the total number of steps per day increased to 1.0766189 &times; 10<sup>4</sup> and mean remain same.
+After imputing missing values , the median of the total number of steps per day increased to 1.0766189 &times; 10<sup>4</sup> and mean remains same.
 
 
 ```r
